@@ -6,14 +6,14 @@
 #    By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/05 19:40:51 by lottavi           #+#    #+#              #
-#    Updated: 2025/04/04 14:00:18 by lottavi          ###   ########.fr        #
+#    Updated: 2025/04/04 14:05:53 by lottavi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = build/ex03
+NAME = build/bureaucrat
 
 SRCS = Bureaucrat.cpp main.cpp
 OBJS = $(SRCS:%.cpp=build/bin/%.o)
