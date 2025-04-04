@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 18:59:07 by lottavi           #+#    #+#             */
-/*   Updated: 2025/03/12 18:59:07 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/04/04 15:43:18 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int main() {
 	try {
-		Bureaucrat b("Alice", 1);
+		Bureaucrat b("Alice", 0);
 		std::cout << b << std::endl;
 		b.decrementGrade();
-		std::cout << b << std::endl;
+		//std::cout << b << std::endl;
 	} catch (const std::exception& e) {
 		std::cerr << e.what() << std::endl;
 	}

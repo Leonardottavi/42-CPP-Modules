@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 18:56:35 by lottavi           #+#    #+#             */
-/*   Updated: 2025/03/12 18:56:35 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/04/04 15:42:34 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,3 +52,4 @@ std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat) {
 	os << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade();
 	return os;
 }
+
