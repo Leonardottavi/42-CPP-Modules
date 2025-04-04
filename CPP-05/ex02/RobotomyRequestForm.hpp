@@ -6,24 +6,27 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 19:14:18 by lottavi           #+#    #+#             */
-/*   Updated: 2025/03/12 19:14:18 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/04/04 14:53:14 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ROBOTOMY_HPP
-#define ROBOTOMY_HPP
+#ifndef ROBOTOMYREQUESTFORM_HPP
+#define ROBOTOMYREQUESTFORM_HPP
 
 #include "AForm.hpp"
-#include <cstdlib>
-#include <ctime>
+#include <string>
 
-class RobotomyRequestForm : public AForm {
+class	RobotomyRequestForm : public AForm {
 private:
-	std::string _target;
+	std::string	_target;
 
 public:
 	RobotomyRequestForm(const std::string& target);
-	virtual void execute(const Bureaucrat& executor) const;
+	virtual ~RobotomyRequestForm();
+
+protected:
+	virtual void	executeAction() const;
 };
 
 #endif
+

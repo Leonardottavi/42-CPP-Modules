@@ -6,22 +6,26 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 19:14:39 by lottavi           #+#    #+#             */
-/*   Updated: 2025/03/12 19:14:39 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/04/04 14:52:48 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRESIDENTIAL_HPP
-#define PRESIDENTIAL_HPP
+#ifndef PRESIDENTIALPARDONFORM_HPP
+#define PRESIDENTIALPARDONFORM_HPP
 
 #include "AForm.hpp"
+#include <string>
 
 class PresidentialPardonForm : public AForm {
-private:
-	std::string _target;
+	private:
+		std::string _target;
 
-public:
-	PresidentialPardonForm(const std::string& target);
-	virtual void execute(const Bureaucrat& executor) const;
+	public:
+		PresidentialPardonForm(const std::string& target);
+		virtual ~PresidentialPardonForm();
+
+	protected:
+		virtual void executeAction() const;
 };
 
 #endif

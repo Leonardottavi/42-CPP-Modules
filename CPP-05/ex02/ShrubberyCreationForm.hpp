@@ -6,23 +6,27 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 19:13:50 by lottavi           #+#    #+#             */
-/*   Updated: 2025/03/12 19:13:50 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/04/04 14:53:39 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERY_HPP
-#define SHRUBBERY_HPP
+#ifndef SHRUBBERYCREATIONFORM_HPP
+#define SHRUBBERYCREATIONFORM_HPP
 
 #include "AForm.hpp"
-#include <fstream>
+#include <string>
 
-class ShrubberyCreationForm : public AForm {
+class	ShrubberyCreationForm : public AForm {
 private:
-	std::string _target;
+	std::string	_target;
 
 public:
 	ShrubberyCreationForm(const std::string& target);
-	virtual void execute(const Bureaucrat& executor) const;
+	virtual ~ShrubberyCreationForm();
+
+protected:
+	virtual void	executeAction() const;
 };
 
 #endif
+

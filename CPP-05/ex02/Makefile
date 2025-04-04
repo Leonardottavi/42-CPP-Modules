@@ -6,7 +6,7 @@
 #    By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/05 19:40:51 by lottavi           #+#    #+#              #
-#    Updated: 2025/04/04 14:04:45 by lottavi          ###   ########.fr        #
+#    Updated: 2025/04/04 14:28:19 by lottavi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = build/form
 
-SRCS = Bureaucrat.cpp main.cpp Form.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
+SRCS = Bureaucrat.cpp main.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
 OBJS = $(SRCS:%.cpp=build/bin/%.o)
 
 all: build_dir $(NAME)

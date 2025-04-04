@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 19:15:10 by lottavi           #+#    #+#             */
-/*   Updated: 2025/03/12 19:15:10 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/04/04 14:52:25 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,33 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include <iostream>
 
-int main() {
-	Bureaucrat ceo("CEO", 1);
-	Bureaucrat intern("Intern", 150);
+int	main() {
+	try {
+		Bureaucrat	ceo("Zaphod", 1);
+		Bureaucrat	intern("Bob", 150);
 
-	ShrubberyCreationForm shrub("Garden");
-	RobotomyRequestForm robot("Bender");
-	PresidentialPardonForm pardon("Ford");
+		ShrubberyCreationForm	shrub("home");
+		RobotomyRequestForm		robotomy("Marvin");
+		PresidentialPardonForm	pardon("Arthur");
 
-	ceo.signForm(shrub);
-	ceo.signForm(robot);
-	ceo.signForm(pardon);
+		ceo.signForm(shrub);
+		ceo.signForm(robotomy);
+		ceo.signForm(pardon);
 
-	std::cout << "\n--- Execute Forms ---\n";
-	ceo.executeForm(shrub);   // Successo
-	ceo.executeForm(robot);   // 50% chance
-	ceo.executeForm(pardon);  // Successo
+		ceo.executeForm(shrub);
+		ceo.executeForm(robotomy);
+		ceo.executeForm(pardon);
 
-	std::cout << "\n--- Test Errori ---\n";
-	intern.executeForm(pardon); // Grado troppo basso
-	PresidentialPardonForm invalidPardon("Zaphod");
-	ceo.executeForm(invalidPardon); // Form non firmato
+		intern.executeForm(pardon); // Should fail due to low grade
 
+		// Test unsigned form
+		PresidentialPardonForm	unsignedPardon("Ford");
+		ceo.executeForm(unsignedPardon); // Should throw FormNotSignedException
+
+	} catch (const std::exception& e) {
+		std::cerr << "Exception: " << e.what() << std::endl;
+	}
 	return 0;
 }
