@@ -6,7 +6,7 @@
 #    By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/05 19:40:51 by lottavi           #+#    #+#              #
-#    Updated: 2025/03/12 19:06:55 by lottavi          ###   ########.fr        #
+#    Updated: 2025/04/04 14:04:25 by lottavi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = build/form
 
-SRCS = bureaucrat.cpp main.cpp form.cpp
+SRCS = Bureaucrat.cpp main.cpp Form.cpp
 OBJS = $(SRCS:%.cpp=build/bin/%.o)
 
 all: build_dir $(NAME)
