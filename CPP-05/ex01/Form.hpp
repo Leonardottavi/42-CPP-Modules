@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 19:01:39 by lottavi           #+#    #+#             */
-/*   Updated: 2025/04/04 14:27:09 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/04/04 15:46:10 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <exception>
 #include "Bureaucrat.hpp"
 
-class Bureaucrat;
+class Bureaucrat; // Forward declaration of Bureaucrat class
 
 class Form {
 private:

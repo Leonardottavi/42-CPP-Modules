@@ -6,13 +6,14 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 18:55:29 by lottavi           #+#    #+#             */
-/*   Updated: 2025/04/04 14:26:29 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/04/04 15:45:48 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUREAUCRAT_HPP
 #define BUREAUCRAT_HPP
 
+#include "Form.hpp" // Include Form header for the Form class
 #include <string>
 #include <exception>
 
