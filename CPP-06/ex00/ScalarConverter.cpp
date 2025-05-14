@@ -6,9 +6,10 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 14:42:13 by lottavi           #+#    #+#             */
-/*   Updated: 2025/05/02 14:42:13 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/05/14 15:48:36 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "ScalarConverter.hpp"
 #include <iostream>
 #include <cstdlib>
