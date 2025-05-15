@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 14:42:13 by lottavi           #+#    #+#             */
-/*   Updated: 2025/05/14 15:48:36 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/05/15 12:26:48 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,22 @@
 #include <cstdlib>
 #include <limits>
 #include <cmath>
+#include <cctype>
 
 ScalarConverter::ScalarConverter() {}
 ScalarConverter::ScalarConverter(const ScalarConverter &) {}
 ScalarConverter &ScalarConverter::operator=(const ScalarConverter &) { return *this; }
 ScalarConverter::~ScalarConverter() {}
 
-static bool isPseudoFloat(const std::string &s) {
+static bool	isPseudoFloat(const std::string &s) {
 	return (s == "+inff" || s == "-inff" || s == "nanf");
 }
 
-static bool isPseudoDouble(const std::string &s) {
+static bool	isPseudoDouble(const std::string &s) {
 	return (s == "+inf" || s == "-inf" || s == "nan");
 }
 
-static void printChar(double d) {
+static void	printChar(double d) {
 	if (d < std::numeric_limits<char>::min() || d > std::numeric_limits<char>::max() ||
 		isnan(d))
 		std::cout << "char: impossible" << std::endl;
@@ -42,7 +43,7 @@ static void printChar(double d) {
 	}
 }
 
-static void printInt(double d) {
+static void	printInt(double d) {
 	if (d < std::numeric_limits<int>::min() || d > std::numeric_limits<int>::max() ||
 		isnan(d) || isinf(d))
 		std::cout << "int: impossible" << std::endl;
@@ -50,7 +51,7 @@ static void printInt(double d) {
 		std::cout << "int: " << static_cast<int>(d) << std::endl;
 }
 
-static void printFloat(double d) {
+static void	printFloat(double d) {
 	if (isnan(d))
 		std::cout << "float: nanf" << std::endl;
 	else if (isinf(d)) {
@@ -60,11 +61,11 @@ static void printFloat(double d) {
 			std::cout << "float: -inff" << std::endl;
 	} else {
 		float f = static_cast<float>(d);
-		std::cout << "float: " << f << (f - static_cast<int>(f) == 0 ? ".0f" : "f") << std::endl;
+		std::cout << "float: " << f << (f == static_cast<int>(f) ? ".0f" : "f") << std::endl;
 	}
 }
 
-static void printDouble(double d) {
+static void	printDouble(double d) {
 	if (isnan(d))
 		std::cout << "double: nan" << std::endl;
 	else if (isinf(d)) {
@@ -73,14 +74,14 @@ static void printDouble(double d) {
 		else
 			std::cout << "double: -inf" << std::endl;
 	} else {
-		std::cout << "double: " << d << (d - static_cast<int>(d) == 0 ? ".0" : "") << std::endl;
+		std::cout << "double: " << d << (d == static_cast<int>(d) ? ".0" : "") << std::endl;
 	}
 }
 
-void ScalarConverter::convert(const std::string &literal) {
-	// Check for char literal like 'c'
-	if (literal.size() == 3 && literal[0] == '\'' && literal[2] == '\'') {
-		char c = literal[1];
+void	ScalarConverter::convert(const std::string &literal) {
+	// Check for single non-digit character
+	if (literal.size() == 1 && !isdigit(literal[0])) {
+		char c = literal[0];
 		std::cout << "char: '" << c << "'" << std::endl;
 		std::cout << "int: " << static_cast<int>(c) << std::endl;
 		std::cout << "float: " << static_cast<float>(c) << ".0f" << std::endl;
