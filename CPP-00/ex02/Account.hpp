@@ -30,6 +30,8 @@ public:
 	static void	displayAccountsInfos( void );
 
 	Account( int initial_deposit );
+	Account( const Account& other );
+	Account& operator=( const Account& other );
 	~Account( void );
 
 	void	makeDeposit( int deposit );

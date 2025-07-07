@@ -6,12 +6,29 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 16:34:36 by lottavi           #+#    #+#             */
-/*   Updated: 2024/11/20 14:23:13 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/07/07 10:59:16 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 #include <iostream>
+
+// Constructor
+Harl::Harl() {}
+
+// Copy constructor
+Harl::Harl(const Harl& other) {
+	(void)other;
+}
+
+// Assignment operator
+Harl& Harl::operator=(const Harl& other) {
+	(void)other;
+	return *this;
+}
+
+// Destructor
+Harl::~Harl() {}
 
 void Harl::debug(void)
 {

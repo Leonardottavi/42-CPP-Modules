@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:02:29 by lottavi           #+#    #+#             */
-/*   Updated: 2024/10/29 15:20:47 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/07/07 10:59:16 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ public:
 	Contact();
 	Contact(const std::string& firstName, const std::string& lastName, const std::string& nickname,
 			const std::string& phoneNumber, const std::string& darkestSecret);
+	Contact(const Contact& other);
+	Contact& operator=(const Contact& other);
+	~Contact();
 
 	std::string getFirstName() const;
 	std::string getLastName() const;

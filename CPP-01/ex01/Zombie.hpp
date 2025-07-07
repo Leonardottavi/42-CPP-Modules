@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 16:32:32 by lottavi           #+#    #+#             */
-/*   Updated: 2024/11/14 16:58:00 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/07/07 10:59:16 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ private:
 
 public:
 	Zombie();
+	Zombie(const Zombie& other);
+	Zombie& operator=(const Zombie& other);
 	~Zombie();
 
 	void announce() const;

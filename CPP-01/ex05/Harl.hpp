@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 16:34:20 by lottavi           #+#    #+#             */
-/*   Updated: 2024/11/15 16:58:12 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/07/07 10:59:16 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,11 @@ private:
 	void error(void);
 
 public:
+	Harl();
+	Harl(const Harl& other);
+	Harl& operator=(const Harl& other);
+	~Harl();
+
 	void complain(std::string level);
 };
 
