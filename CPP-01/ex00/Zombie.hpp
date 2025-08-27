@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 15:16:46 by lottavi           #+#    #+#             */
-/*   Updated: 2024/11/20 14:31:06 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/07/07 10:59:16 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,12 @@ public:
 
 	// Constructor to initialize the name
 	Zombie(std::string zombieName);
+
+	// Copy constructor
+	Zombie(const Zombie& other);
+
+	// Assignment operator
+	Zombie& operator=(const Zombie& other);
 
 	// Destructor to print a message when a zombie is destroyed
 	~Zombie();

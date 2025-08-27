@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:03:20 by lottavi           #+#    #+#             */
-/*   Updated: 2024/10/29 15:20:55 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/07/07 10:59:16 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,25 @@
 #include <iomanip>
 
 Phonebook::Phonebook() : contactCount(0), nextIndex(0) {}
+
+Phonebook::Phonebook(const Phonebook& other) : contactCount(other.contactCount), nextIndex(other.nextIndex) {
+	for (int i = 0; i < 8; i++) {
+		contacts[i] = other.contacts[i];
+	}
+}
+
+Phonebook& Phonebook::operator=(const Phonebook& other) {
+	if (this != &other) {
+		contactCount = other.contactCount;
+		nextIndex = other.nextIndex;
+		for (int i = 0; i < 8; i++) {
+			contacts[i] = other.contacts[i];
+		}
+	}
+	return *this;
+}
+
+Phonebook::~Phonebook() {}
 
 void Phonebook::addContact(const Contact& contact) {
 	contacts[nextIndex] = contact;

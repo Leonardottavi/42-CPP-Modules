@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:34:41 by lottavi           #+#    #+#             */
-/*   Updated: 2024/10/29 13:54:02 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/07/07 10:59:16 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,29 @@ Account::Account(int initial_deposit) : _amount(0), _nbDeposits(0), _nbWithdrawa
 	_totalAmount += initial_deposit;
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";created" << std::endl;
+}
+
+Account::Account(const Account& other) : _amount(other._amount), _nbDeposits(other._nbDeposits), _nbWithdrawals(other._nbWithdrawals)
+{
+	_accountIndex = _nbAccounts;
+	_nbAccounts++;
+	_totalAmount += _amount;
+	_displayTimestamp();
+	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";copy created" << std::endl;
+}
+
+Account& Account::operator=(const Account& other)
+{
+	if (this != &other) {
+		_totalAmount -= _amount;
+		_amount = other._amount;
+		_nbDeposits = other._nbDeposits;
+		_nbWithdrawals = other._nbWithdrawals;
+		_totalAmount += _amount;
+		_displayTimestamp();
+		std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";assigned" << std::endl;
+	}
+	return *this;
 }
 
 Account::~Account()

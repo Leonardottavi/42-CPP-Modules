@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 19:25:38 by lottavi           #+#    #+#             */
-/*   Updated: 2025/03/12 19:25:38 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/07/07 10:59:16 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,16 @@ const Intern::FormCreator Intern::_formCreators[3] = {
 };
 
 Intern::Intern() {}
+
+Intern::Intern(const Intern& other) {
+    (void)other;
+}
+
+Intern& Intern::operator=(const Intern& other) {
+    (void)other;
+    return *this;
+}
+
 Intern::~Intern() {}
 
 AForm* Intern::makeForm(const std::string& formName, const std::string& target) {

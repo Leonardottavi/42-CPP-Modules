@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 15:19:57 by lottavi           #+#    #+#             */
-/*   Updated: 2024/11/20 14:31:53 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/07/07 10:59:16 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,22 @@ Zombie::Zombie() : name("Unnamed Zombie")
 Zombie::Zombie(std::string zombieName) : name(zombieName)
 {
 	std::cout << "A zombie named " << name << " has been created." << std::endl;
+}
+
+// Copy constructor
+Zombie::Zombie(const Zombie& other) : name(other.name)
+{
+	std::cout << "A zombie named " << name << " has been created by copy." << std::endl;
+}
+
+// Assignment operator
+Zombie& Zombie::operator=(const Zombie& other)
+{
+	if (this != &other) {
+		name = other.name;
+		std::cout << "A zombie has been assigned the name " << name << std::endl;
+	}
+	return *this;
 }
 
 // Destructor
