@@ -6,7 +6,7 @@
 #    By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/27 11:48:33 by lottavi           #+#    #+#              #
-#    Updated: 2025/08/27 11:48:33 by lottavi          ###   ########.fr        #
+#    Updated: 2025/09/16 17:41:18 by lottavi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = build/array
 
-SRCS = Array.cpp main.cpp
+SRCS = main.cpp
 OBJS = $(SRCS:%.cpp=build/bin/%.o)
 
 all: build_dir $(NAME)
