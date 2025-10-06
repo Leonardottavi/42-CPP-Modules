@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:12:57 by lottavi           #+#    #+#             */
-/*   Updated: 2025/06/26 16:12:57 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/10/06 11:33:16 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #include <iostream>
 #include <string>
 
-// Function templates to test with iter
 template<typename T>
 void print(T const& x) {
 	std::cout << x << " ";

@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 16:12:48 by lottavi           #+#    #+#             */
-/*   Updated: 2025/06/26 16:12:48 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/10/06 11:25:42 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,7 @@ void iter(T* array, size_t length, F function) {
 		function(array[i]);
 	}
 }
+
+
 
 #endif
