@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 00:00:00 by lottavi           #+#    #+#             */
-/*   Updated: 2025/06/26 00:00:00 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/10/06 11:42:45 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 #include <stdexcept>
 #include <cstddef>
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 template<typename T>
 class Array {
@@ -57,16 +60,16 @@ public:
 	}
 
 	// Subscript operator with bounds checking
-	T& operator[](size_t index) {
-		if (index >= _size) {
+	T& operator[](int index) {
+		if (index < 0 || static_cast<size_t>(index) >= _size) {
 			throw std::out_of_range("Index out of bounds");
 		}
 		return _array[index];
 	}
 
 	// Const subscript operator with bounds checking
-	T const& operator[](size_t index) const {
-		if (index >= _size) {
+	T const& operator[](int index) const {
+		if (index < 0 || static_cast<size_t>(index) >= _size) {
 			throw std::out_of_range("Index out of bounds");
 		}
 		return _array[index];
