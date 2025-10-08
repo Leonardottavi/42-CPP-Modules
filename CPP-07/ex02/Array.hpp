@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 00:00:00 by lottavi           #+#    #+#             */
-/*   Updated: 2025/10/06 11:42:45 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/10/08 11:59:51 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <string>
 
 template<typename T>
 class Array {
