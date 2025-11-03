@@ -6,16 +6,16 @@
 #    By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/27 10:10:24 by lottavi           #+#    #+#              #
-#    Updated: 2025/11/03 09:13:29 by lottavi          ###   ########.fr        #
+#    Updated: 2025/11/03 09:15:28 by lottavi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= easyfind
+NAME	= build/btc
 
 CXX		= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-SRCS	= main.cpp
+SRCS	= main.cpp BitcoinExchange.cpp
 OBJS = $(SRCS:%.cpp=build/bin/%.o)
 
 all: build_dir $(NAME)

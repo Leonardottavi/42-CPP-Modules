@@ -5,17 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/10/27 10:10:24 by lottavi           #+#    #+#              #
-#    Updated: 2025/11/03 09:13:29 by lottavi          ###   ########.fr        #
+#    Created: 2025/11/03 09:00:00 by lottavi           #+#    #+#              #
+#    Updated: 2025/11/03 09:15:55 by lottavi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= easyfind
+NAME	= build/RPN
 
 CXX		= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-SRCS	= main.cpp
+SRCS	= main.cpp RPN.cpp
 OBJS = $(SRCS:%.cpp=build/bin/%.o)
 
 all: build_dir $(NAME)
@@ -38,4 +38,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re build_dir
-
