@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 09:00:00 by lottavi           #+#    #+#             */
-/*   Updated: 2025/11/03 09:12:16 by lottavi          ###   ########.fr       */
+/*   Updated: 2025/11/13 09:58:29 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,7 @@ bool RPN::isValidNumber(const std::string& token) const
 			return false;
 	}
 
-	int num = std::atoi(token.c_str());
-	return (num < 10);
+	return true;
 }
 
 bool RPN::evaluate(const std::string& expression)
